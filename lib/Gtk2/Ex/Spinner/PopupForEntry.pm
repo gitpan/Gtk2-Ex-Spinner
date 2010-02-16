@@ -5,7 +5,7 @@ use warnings;
 use Gtk2;
 use List::Util qw(min max);
 
-our $VERSION = 5;
+our $VERSION = 0.2;
 
 use constant DEBUG => 0;
 
@@ -24,6 +24,9 @@ sub INIT_INSTANCE {
 
   $self->set_decorated (0);
   $self->set_flags('can-focus');
+  
+  $self->set_keep_above(1);
+  $self->set_type_hint('splashscreen');
 
   my $hbox = Gtk2::HBox->new;
   $self->add ($hbox);
@@ -212,8 +215,8 @@ sub _do_position {
     print "  alloc ",$alloc->width,"x",$alloc->height,"\n";
   }
 
-  my $toplevel = $entry->get_ancestor ('Gtk2::Window'); # undef if no toplevel
-  $self->set_transient_for ($toplevel);
+  #my $toplevel = $entry->get_ancestor ('Gtk2::Window'); # undef if no toplevel
+  #$self->set_transient_for ($toplevel);
 
   my $win = $entry->window;
   if ($win) {
@@ -287,6 +290,7 @@ sub _window_move_underneath {
 }
 
 1;
+
 __END__
 
 =head1 NAME

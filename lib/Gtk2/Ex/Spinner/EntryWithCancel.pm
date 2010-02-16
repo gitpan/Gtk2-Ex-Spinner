@@ -5,7 +5,7 @@ use warnings;
 # version 1.180 for perl subclass to override GInterfaces from superclass
 use Gtk2 1.180;
 
-our $VERSION = 5;
+our $VERSION = 0.2;
 
 use constant DEBUG => 0;
 
