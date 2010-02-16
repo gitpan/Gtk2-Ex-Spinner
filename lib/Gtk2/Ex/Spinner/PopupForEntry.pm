@@ -5,7 +5,7 @@ use warnings;
 use Gtk2;
 use List::Util qw(min max);
 
-our $VERSION = 0.2;
+our $VERSION = 5.1;
 
 use constant DEBUG => 0;
 

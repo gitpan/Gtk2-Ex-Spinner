@@ -8,7 +8,7 @@ use Test::More tests => 9;
 SKIP: { eval 'use Test::NoWarnings; 1'
           or skip 'Test::NoWarnings not available', 1; }
 
-my $want_version = 0.2;
+my $want_version = 0.21;
 ok ($Gtk2::Ex::Spinner::VERSION >= $want_version, 'VERSION variable');
 ok (Gtk2::Ex::Spinner->VERSION  >= $want_version, 'VERSION class method');
 ok (eval { Gtk2::Ex::Spinner->VERSION($want_version); 1 },

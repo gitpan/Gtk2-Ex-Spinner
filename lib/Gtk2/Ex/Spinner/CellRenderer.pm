@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Gtk2;
 
-our $VERSION = 0.2;
+our $VERSION = 5.1;
 
 use constant DEBUG => 0;
 
